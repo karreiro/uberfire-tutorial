@@ -45,9 +45,10 @@ public class DashboardView extends Composite implements DashboardPresenter.View 
     }
 
     @Override
-    public void addProject( final String project,
-                            final String tasksCreated,
-                            final String tasksDone ) {
+    public void addProject(
+            final String project,
+            final String tasksCreated,
+            final String tasksDone ) {
         ListGroup projectGroup = GWT.create( ListGroup.class );
 
         projectGroup.add( createListGroupItem( ListGroupItemType.INFO, project.toUpperCase(), null ) );
@@ -62,9 +63,10 @@ public class DashboardView extends Composite implements DashboardPresenter.View 
         projects.clear();
     }
 
-    private ListGroupItem createListGroupItem( final ListGroupItemType type,
-                                               final String text,
-                                               final String number ) {
+    private ListGroupItem createListGroupItem(
+            final ListGroupItemType type,
+            final String text,
+            final String number ) {
         ListGroupItem item = GWT.create( ListGroupItem.class );
 
         item.setType( type );
